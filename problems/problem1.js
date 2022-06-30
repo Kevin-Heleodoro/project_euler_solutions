@@ -5,11 +5,11 @@
 // Find the sum of all the multiples of 3 or 5 below 1000.
 
 function sumOfMultiples(num) {
-	let sum = 0;
+	let sum = 0; // variable to keep track of the sum of the multiples of 3 and 5
 
 	for (let i = 0; i < num; i++) {
 		if (i % 5 === 0 || i % 3 === 0) {
-			sum += i;
+			sum += i; // add the current number to the previous sum if it is divisible by 3 or 5
 		}
 	}
 

@@ -7,20 +7,22 @@
 // By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
 function evenFib() {
-	let totalSum = 1;
-	let prevSum = 1;
-	let evenSum = 0;
+	let result = 0; // keeps track of even-valued terms sum
+	let x = 1; // first fibonacci #
+	let y = 2; // second fibonacci #
 
-	while (totalSum <= 4000000) {
-		if (totalSum % 2 === 0) {
-			evenSum += totalSum;
+	while (x <= 4000000) {
+		if (x % 2 === 0) {
+			result += x; // add the current term to result if it is even
 		}
-		prevSum = totalSum;
-		totalSum += prevSum;
-		// console.log(totalSum);
+
+		[x, y] = [y, x + y]; // first # becomes the second #, and second # becomes sum of x + y
 	}
 
-	return evenSum;
+	return result;
 }
 
 console.log(evenFib());
+
+// Answer:
+// 4613732
