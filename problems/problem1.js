@@ -17,3 +17,6 @@ function sumOfMultiples(num) {
 }
 
 console.log(sumOfMultiples(1000));
+
+// Answer:
+// 233168
